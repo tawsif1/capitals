@@ -4,19 +4,22 @@ const axios = require('axios').default;
 export default function Main() {
     const [country, setCountry] = useState("");
     const [capitals, setCapitals] = useState([]);
-    const [neigh, setNeigh] = useState();
-    const [info, setInfo] = useState()
+    
 
     const url = "https://restcountries.eu/rest/v2/name/"+country;
  
 
     const FindCountry = (e) =>{
-        
-        axios.get(url).then((res)=> {setInfo(res.data);
-            capitals.push(res.data[0].capital);
-            res.data[0].borders.forEach(element => {
-                axios.get("https://restcountries.eu/rest/v2/alpha/"+element)
-                .then((res)=>capitals.push(res.data.capital))})})}
+        console.log("pressed")
+        axios.get(url).then((res)=> {
+            setCapitals(capitals => [...capitals, res.data[0].capital]);
+            let array = res.data[0].borders.map(element => {
+                return axios.get("https://restcountries.eu/rest/v2/alpha/"+element)
+            })
+            axios.all(array).then((resps)=> setCapitals(capitals => [...capitals,...resps.map((res)=> res.data.capital)]) )
+
+            })
+            }
        
     
     return (
