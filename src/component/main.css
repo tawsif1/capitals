@@ -1,22 +1,26 @@
 input {
     width: 20vw;
     height: 3vh;
-    margin: 2vw;
+    margin-right: 2vw;
+    margin-top: 2vw;
     font-family: 'Roboto', sans-serif;
 line-height: 100%;
 font-size: 20px;
+
 text-align: center;
 border-color: #D9E1E4;}
 .input:focus{
     outline: none;
 }
 .header{
-    font-family: 'Emblema One', cursive;
+    padding: 0;
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .button{
     height: 4vh;
-    background: transparent;
+    background: white;
     border-color: #D9E1E4;
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
@@ -26,11 +30,20 @@ border-color: #D9E1E4;}
 .body{
     
     min-height: 100vh;
+    height: auto;
+    padding: 0;
+    margin:0;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("https://www.nicepng.com/png/detail/39-393368_the-numbers-world-map-dotted-transparent.png");
 
     
 }
 
 h2{
-    font-family: 'Emblema One', cursive;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 40px;
+    z-index: 10;
+
 }
