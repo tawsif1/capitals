@@ -1,0 +1,36 @@
+input {
+    width: 20vw;
+    height: 3vh;
+    margin: 2vw;
+    font-family: 'Roboto', sans-serif;
+line-height: 100%;
+font-size: 20px;
+text-align: center;
+border-color: #D9E1E4;}
+.input:focus{
+    outline: none;
+}
+.header{
+    font-family: 'Emblema One', cursive;
+}
+
+.button{
+    height: 4vh;
+    background: transparent;
+    border-color: #D9E1E4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+.body{
+    
+    min-height: 100vh;
+    background-size: cover;
+
+    
+}
+
+h2{
+    font-family: 'Emblema One', cursive;
+}
